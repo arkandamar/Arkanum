@@ -1,6 +1,12 @@
 import Navbar from "./components/Navbar.js";
-import "./App.css";
+import ScrollPage from "./pages/ScrollPage.js";
+import "./App.scss";
 
 export default function App() {
-  return <Navbar />;
+  return (
+    <div className="container">
+      <Navbar />
+      <ScrollPage />
+    </div>
+  );
 }

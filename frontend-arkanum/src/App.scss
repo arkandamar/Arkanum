@@ -1,0 +1,10 @@
+@import "./main.scss";
+
+.container {
+  width: 98vw;
+  height: 98vh;
+  padding: 1vh;
+  display: grid;
+  gap: 1vh;
+  grid-template-columns: max-content 1fr 1fr;
+}

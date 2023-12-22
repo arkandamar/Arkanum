@@ -42,7 +42,7 @@ export default function Navbar() {
         <div>Home</div>
       </div>
       <div className="container-display">
-        <div className="container">
+        <div className="container-border">
           <div className="border">
             <div className="display"></div>
           </div>
