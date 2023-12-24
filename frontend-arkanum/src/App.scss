@@ -1,11 +1,11 @@
 @import "./main.scss";
 
 .container {
-  width: 98vw;
-  height: 98vh;
-  padding: 1vh;
+  width: 100vw;
+  height: 100vh;
   display: grid;
-  gap: 1vh;
   grid-template-columns: max-content max-content 1fr;
+  grid-template-rows: max-content 1fr;
+  grid-template-areas: "search search search";
   background: rgb(131, 124, 124);
 }

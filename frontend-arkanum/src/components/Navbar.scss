@@ -1,8 +1,11 @@
 @use "sass:map";
 @import "../main.scss";
 
+$navbar-expand: 186px;
+$navbar-padding-side: 10px;
+
 :root .active {
-  width: 136px;
+  width: $navbar-expand;
 
   .container-menu {
     .hamburger-menu {
@@ -38,8 +41,7 @@
   height: 100%;
   flex-direction: column;
   @include align($items: center);
-  border-radius: $primary-radius;
-  padding: 0 10px;
+  padding: 0 $navbar-padding-side;
   transition: width 300ms ease;
   gap: 12px;
 

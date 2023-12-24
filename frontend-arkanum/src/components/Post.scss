@@ -1,4 +1,5 @@
 @import "../main.scss";
+$post-width: 760px;
 
 .container-post {
   max-width: 760px;
@@ -34,13 +35,12 @@
           
         }
       }
-
     }
   }
 
   .content {
     display: grid;
-    grid-template-rows: 34px 1fr 24px;
+    grid-template-rows: 34px 1fr 32px;
     height: max-content;
     padding: 0 12px 0 0;
 
@@ -65,16 +65,30 @@
 
     .interaction {
       width: 100%;
-      height: 24px;
+      height: 32px;
       @include align(end, center);
       gap: 12px;
-      filter: invert(100%);
 
-      div {
-        height: 20px;
-
+      .container-inter {
+        height: 28px;
+        border-radius: 28px;
+        @include align(center, center);
+        padding: 2px 10px;
+        gap: 6px;
+        
         img {
-          height: 100%;
+          @include box(18px);
+        }
+        
+        .number {
+          @include align(center, center);
+          font-size: 14px;
+          margin-top: 1px;
+        }
+        
+        &:hover {
+          background: red;
+          cursor: pointer;
         }
       }
     }

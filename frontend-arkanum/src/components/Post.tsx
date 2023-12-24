@@ -26,11 +26,13 @@ export default function Post() {
           labore! Amet, cupiditate laboriosam? Lorem ipsum dolor sit ame
         </div>
         <div className="interaction">
-          <div className="comment">
+          <div className="container-inter comment">
             <img src={comment} />
+            <div className="number">12</div>
           </div>
-          <div className="compass">
+          <div className="container-inter compass">
             <img src={compass} />
+            {/* <div className="number"></div> */}
           </div>
         </div>
       </div>
