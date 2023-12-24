@@ -1,8 +1,22 @@
 import "./Post.scss";
 import comment from "../assets/comment.png";
 import compass from "../assets/compass.png";
+import unlikedIcon from "../assets/unliked.png";
+import likedIcon from "../assets/liked.png";
+import { useState } from "react";
 
 export default function Post() {
+  const [like, setLike] = useState<number>(0);
+  const [liked, setLiked] = useState<boolean>(false);
+
+  const onLikeHandle = () => {
+    // liked toggle
+    !liked ? setLiked(true) : setLiked(false);
+
+    // if not liked increment, if liked decrement
+    setLike(!liked ? like + 1 : like - 1);
+  };
+
   return (
     <div className="container-post">
       <div className="side">
@@ -26,6 +40,10 @@ export default function Post() {
           labore! Amet, cupiditate laboriosam? Lorem ipsum dolor sit ame
         </div>
         <div className="interaction">
+          <div onClick={onLikeHandle} className="container-inter like">
+            <img src={liked ? likedIcon : unlikedIcon} />
+            <div className="number">{like}</div>
+          </div>
           <div className="container-inter comment">
             <img src={comment} />
             <div className="number">12</div>
