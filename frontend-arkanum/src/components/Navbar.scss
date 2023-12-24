@@ -39,8 +39,8 @@
   flex-direction: column;
   @include align($items: center);
   border-radius: $primary-radius;
-  padding: 0 10px 0 8px;
-  transition: width 400ms ease;
+  padding: 0 10px;
+  transition: width 300ms ease;
   gap: 12px;
 
   .container-menu {
@@ -77,7 +77,7 @@
 
   .menu {
     width: 100%;
-    height: 44px;
+    height: 48px;
     color: white;
     font-size: 16px;
     border-radius: $secondary-radius;
@@ -86,7 +86,7 @@
     @include align($items: center);
 
     img {
-      @include box(20);
+      @include box(20px);
       filter: invert(100%);
       margin-left: 14px;
     }
@@ -94,7 +94,7 @@
     div {
       margin-top: 2px;
       visibility: hidden;
-      transition: visibility 100ms ease;
+      transition: visibility 100ms cubic-bezier(0.41, 0.93, 0.46, 0.96);
     }
 
     &:hover {
@@ -110,14 +110,14 @@
     overflow: hidden;
 
     .container-border {
-      @include box(48);
+      @include box(48px);
       @include align(center, center);
 
       .border {
         border-radius: 100%;
         border: 1px solid rgb(106, 250, 48);
         cursor: pointer;
-        @include box(28);
+        @include box(28px);
         @include align(center, center);
 
         &:hover {
@@ -125,7 +125,7 @@
         }
 
         .display {
-          @include box(24);
+          @include box(24px);
           background-color: rgb(35, 36, 100);
           border-radius: 100%;
         }

@@ -2,8 +2,9 @@
  * Contain all main variables and partials
  *
  */
- 
+
 $primary-color: rgb(2, 7, 48);
+$secondary-color: rgb(8, 18, 92);
 $primary-radius: 12px;
 $secondary-radius: 8px;
 
@@ -12,7 +13,21 @@ $secondary-radius: 8px;
   justify-content: $justify;
   align-items: $items;
 }
-@mixin box($size: 24) {
-  width: #{$size}px;
-  height: #{$size}px;
+@mixin box($size: 24px) {
+  width: $size;
+  height: $size;
+}
+
+@mixin glass(
+  $radius: 16px,
+  $background: rgba(255, 255, 255, 0.2),
+  $border: rgba(255, 255, 255, 0.3)
+) {
+  /* From https://css.glass */
+  background: $background;
+  border-radius: $radius;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid $border;
 }

@@ -1,13 +1,17 @@
+import Post from "../components/Post.js";
 import "./ScrollPage.scss";
 
 export default function ScrollPage() {
   return (
     <div className="container-scroll">
-      <div className="box"></div>
-      <div className="box"></div>
-      <div className="box"></div>
-      <div className="box"></div>
-      <div className="box"></div>
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
     </div>
   );
 }
