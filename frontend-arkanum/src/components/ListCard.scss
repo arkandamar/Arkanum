@@ -6,20 +6,26 @@
   background-color: $secondary-color;
   flex-direction: column;
   @include align();
-  padding: 16px 16px;
+  padding: 16px 0;
   gap: 16px;
   border-radius: 12px;
 
   .title {
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 16px;
   }
-
+  
   .container-list {
     @include align();
     flex-direction: column;
-
+    
     li {
-      padding: 12px 0;
+      padding: 12px 16px;
+      @include align();
+      @include arial();
+      flex-direction: column;
+      gap: 8px;
 
       &:hover {
         background: $tertiary-color;
@@ -29,6 +35,7 @@
   }
 
   .show {
+    margin: 0 16px;
     width: max-content;
     padding: 0 16px;
     height: 32px;
@@ -36,7 +43,7 @@
     @include align(left, center);
 
     &:hover {
-      background: peru;
+      background: $tertiary-color;
       cursor: pointer;
     }
   }

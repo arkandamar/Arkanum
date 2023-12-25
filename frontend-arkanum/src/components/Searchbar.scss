@@ -49,6 +49,10 @@ $button-size: 40px;
       border: none;
       outline: none;
       padding: 0 44px;
+
+      &:focus {
+        background: $tertiary-color;
+      }
     }
   }
 }

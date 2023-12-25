@@ -4,7 +4,8 @@
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-columns: max-content max-content 1fr;
+  grid-template-columns: 206px max-content 1fr;
   grid-template-rows: max-content 1fr;
   grid-template-areas: "search search search";
+  font-family: Helvetica, Arial, sans-serif;
 }

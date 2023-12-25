@@ -67,6 +67,7 @@ $section-size: 34px;
 
     .text {
       width: 100%;
+      @include arial();
     }
 
     .interaction {

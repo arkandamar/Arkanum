@@ -22,3 +22,9 @@ $padding-m: 12px;
   width: $size;
   height: $size;
 }
+@mixin helvetica() {
+  font-family: Helvetica, sans-serif;
+}
+@mixin arial() {
+  font-family: Arial, sans-serif;
+}
