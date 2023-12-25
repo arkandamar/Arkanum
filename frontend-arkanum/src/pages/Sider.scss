@@ -1,7 +1,11 @@
 @import "../main.scss";
 
+$sider-padding: 16px;
+
 .container-sider {
-    width: 100%;
-    height: 100%;
-    background:  yellowgreen;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: $sider-padding 1fr $sider-padding;
+  grid-template-rows: $sider-padding 1fr;
 }

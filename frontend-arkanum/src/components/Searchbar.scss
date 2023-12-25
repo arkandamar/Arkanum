@@ -13,6 +13,7 @@ $button-size: 40px;
   background-color: white;
   display: grid;
   grid-template-columns: ($navbar-expand + 2 * $navbar-padding-side) $post-width;
+  border-bottom: 1px solid $border-color;
 
   .logo {
     width: 100%;

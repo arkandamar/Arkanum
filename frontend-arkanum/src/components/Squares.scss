@@ -8,16 +8,16 @@ $section-size: 34px;
 .container-square {
   max-width: 760px - (2 * $padding-xl);
   height: auto;
-  color: white;
-  background-color: $secondary-color;
   display: grid;
   grid-template-columns: max-content 1fr;
   padding: 0 $padding-xl;
   gap: calc($padding-xl / 2);
+  background-color: white;
+  border-bottom: 1px solid $border-color;
 
   &:hover {
     cursor: pointer;
-    background: rgb(206, 206, 206);
+    background: $secondary-color;
   }
 
   .side {
@@ -39,7 +39,7 @@ $section-size: 34px;
       div {
         width: 3px;
         height: 100%;
-        background-color: rgb(136, 136, 136);
+        // background-color: rgb(136, 136, 136);
       }
     }
   }
@@ -96,7 +96,7 @@ $section-size: 34px;
         }
 
         &:hover {
-          background: red;
+          background-color: $tertiary-color;
           cursor: pointer;
         }
 

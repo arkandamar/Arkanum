@@ -1,0 +1,43 @@
+@import "../main.scss";
+
+.container-card {
+  width: auto;
+  height: max-content;
+  background-color: $secondary-color;
+  flex-direction: column;
+  @include align();
+  padding: 16px 16px;
+  gap: 16px;
+  border-radius: 12px;
+
+  .title {
+    font-size: 24px;
+  }
+
+  .container-list {
+    @include align();
+    flex-direction: column;
+
+    li {
+      padding: 12px 0;
+
+      &:hover {
+        background: $tertiary-color;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .show {
+    width: max-content;
+    padding: 0 16px;
+    height: 32px;
+    border-radius: 32px;
+    @include align(left, center);
+
+    &:hover {
+      background: peru;
+      cursor: pointer;
+    }
+  }
+}
