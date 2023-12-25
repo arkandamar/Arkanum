@@ -1,4 +1,4 @@
-import Post from "../components/Post.js";
+import Post from "../components/Squares.js";
 import "./ScrollPage.scss";
 
 export default function ScrollPage() {

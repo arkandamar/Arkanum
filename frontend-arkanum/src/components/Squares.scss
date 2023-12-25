@@ -1,7 +1,11 @@
 @import "../main.scss";
 $post-width: 760px;
 
-.container-post {
+$square-padding: $padding-m;
+$content-gap: 12px;
+$section-size: 34px;
+
+.container-square {
   max-width: 760px - (2 * $padding-xl);
   height: auto;
   color: white;
@@ -10,15 +14,20 @@ $post-width: 760px;
   grid-template-columns: max-content 1fr;
   padding: 0 $padding-xl;
   gap: calc($padding-xl / 2);
+  
+  &:hover {
+    cursor: pointer;
+    background: rgb(206, 206, 206);
+  }
 
   .side {
     grid-template-columns: max-content;
-    grid-template-rows: max-content 1fr;
+    grid-template-rows: $square-padding max-content 1fr $square-padding;
     display: grid;
     justify-content: center;
-
+    
     .avatar {
-      @include box(34px);
+      @include box($section-size);
       border-radius: 100%;
       background-color: brown;
     }
@@ -31,23 +40,20 @@ $post-width: 760px;
         width: 3px;
         height: 100%;
         background-color: rgb(136, 136, 136);
-
-        &:hover {
-          background-color: aqua;
-        }
       }
     }
   }
-
+  
   .content {
     display: grid;
-    grid-template-rows: 34px 1fr 32px;
+    grid-template-rows: $section-size 1fr $section-size;
     height: max-content;
     text-align: justify;
+    padding: $square-padding 0;
+    gap: $content-gap;
 
     .info {
       width: 100%;
-      height: 34px;
       @include align($justify: space-between);
       flex-direction: column;
 
@@ -60,13 +66,11 @@ $post-width: 760px;
     }
 
     .text {
-      margin-top: 12px;
       width: 100%;
     }
 
     .interaction {
       width: 100%;
-      height: 32px;
       @include align(end, center);
       gap: 12px;
 

@@ -1,4 +1,4 @@
-import "./Post.scss";
+import "./Squares.scss";
 import comment from "../assets/comment.png";
 import compass from "../assets/compass.png";
 import unlikedIcon from "../assets/unliked.png";
@@ -18,9 +18,15 @@ export default function Post() {
   };
 
   return (
-    <div className="container-post">
+    <div className="container-square">
       <div className="side">
+        <div className="relation">
+          <div></div>
+        </div>
         <div className="avatar"></div>
+        <div className="relation">
+          <div></div>
+        </div>
         <div className="relation">
           <div></div>
         </div>
