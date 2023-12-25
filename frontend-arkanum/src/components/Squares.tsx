@@ -3,11 +3,15 @@ import comment from "../assets/comment.png";
 import compass from "../assets/compass.png";
 import unlikedIcon from "../assets/unliked.png";
 import likedIcon from "../assets/liked.png";
-import { useState } from "react";
+import upIcon from "../assets/up.png";
+import React, { useState } from "react";
 
 export default function Post() {
   const [like, setLike] = useState<number>(0);
   const [liked, setLiked] = useState<boolean>(false);
+  const [vote, setVote] = useState<number>(0);
+  const [upVoted, setUpVoted] = useState<boolean>(false);
+  const [downVoted, setDownVoted] = useState<boolean>(false);
 
   const onLikeHandle = () => {
     // liked toggle
@@ -15,6 +19,43 @@ export default function Post() {
 
     // if not liked increment, if liked decrement
     setLike(!liked ? like + 1 : like - 1);
+  };
+
+  const onVoteHandle = (event: React.MouseEvent) => {
+    if (!upVoted && !downVoted) {
+      // filter vote to upvote and downvote
+      if (event.currentTarget.classList.contains("upvote")) {
+        setUpVoted(true);
+        setVote(vote + 1);
+      } else {
+        setDownVoted(true);
+        setVote(vote - 1);
+      }
+    }
+
+    // if click when already upvoted
+    if (upVoted) {
+      if (event.currentTarget.classList.contains("upvote")) {
+        // filter upvote
+        setVote(vote - 1);
+      } else {
+        setVote(vote - 2);
+        setDownVoted(true);
+      }
+      setUpVoted(false);
+    }
+
+    // if click when already downvoted
+    if (downVoted) {
+      // filter upvote
+      if (event.currentTarget.classList.contains("upvote")) {
+        setVote(vote + 2);
+        setUpVoted(true);
+      } else {
+        setVote(vote + 1);
+      }
+      setDownVoted(false);
+    }
   };
 
   return (
@@ -46,6 +87,15 @@ export default function Post() {
           labore! Amet, cupiditate laboriosam? Lorem ipsum dolor sit ame
         </div>
         <div className="interaction">
+          <div className="container-inter container-vote">
+            <div onClick={onVoteHandle} className="upvote vote">
+              <img src={upIcon} />
+            </div>
+            <div className="number">{vote}</div>
+            <div onClick={onVoteHandle} className="downvote vote">
+              <img src={upIcon} />
+            </div>
+          </div>
           <div onClick={onLikeHandle} className="container-inter like">
             <img src={liked ? likedIcon : unlikedIcon} />
             <div className="number">{like}</div>
