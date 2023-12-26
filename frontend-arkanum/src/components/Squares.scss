@@ -57,8 +57,26 @@ $section-size: 34px;
       @include align($justify: space-between);
       flex-direction: column;
 
-      .username {
+      .container-name {
         font-size: 16px;
+        display: flex;
+        gap: 10px;
+
+        .name {
+          font-weight: 600;
+        }
+
+        .username {
+          font-size: 14px;
+          color: $dark-blue;
+
+          span {
+            font-size: 11px;
+            margin-right: 3px;
+            color: cadetblue;
+          }
+        }
+
       }
       .time {
         font-size: 12px;

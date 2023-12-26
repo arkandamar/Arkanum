@@ -7,6 +7,7 @@ $primary-color: #e63946;
 $secondary-color: #dce9f7;
 $tertiary-color: #c8d3df;
 $border-color: #d1ddeb;
+$dark-blue: #2c87ff;
 $primary-radius: 12px;
 $secondary-radius: 8px;
 $padding-xl: 24px;
@@ -27,4 +28,12 @@ $padding-m: 12px;
 }
 @mixin arial() {
   font-family: Arial, sans-serif;
+}
+@keyframes loading {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
 }

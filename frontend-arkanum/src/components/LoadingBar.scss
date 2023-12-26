@@ -1,0 +1,19 @@
+@import "../main.scss";
+
+$loading-color: $primary-color;
+
+.container-loading {
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .loading {
+    animation-name: loading;
+    animation-duration: 4s;
+    height: 100%;
+    background: $loading-color;
+    box-shadow: 1px 0px 2px 1px $loading-color;
+  }
+}

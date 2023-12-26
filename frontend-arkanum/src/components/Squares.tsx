@@ -74,7 +74,12 @@ export default function Post() {
       </div>
       <div className="content">
         <div className="info">
-          <div className="username">budiuhuy</div>
+          <div className="container-name">
+            <div className="name">Budi Susanto</div>
+            <div className="username">
+              <span>u/</span>budiuhuy
+            </div>
+          </div>
           <div className="time">11 hours ago</div>
         </div>
         <div className="text">
