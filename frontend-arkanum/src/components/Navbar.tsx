@@ -1,9 +1,12 @@
 import "./Navbar.scss";
 import home from "../assets/home.png";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import PopUp from "./PopUp.js";
 
 export default function Navbar() {
   const navRef = useRef<HTMLDivElement>(null);
+  const [isPopUp, setIsPopUp] = useState<boolean>(false);
+
   const onClickHandler = () => {
     const navBar: HTMLDivElement | null = navRef.current;
 
@@ -41,14 +44,20 @@ export default function Navbar() {
         <img src={home} />
         <div>Home</div>
       </div>
-      <div className="container-display">
+      <div onClick={() => setIsPopUp(!isPopUp)} className="container-display">
         <div className="container-border">
           <div className="border">
             <div className="display"></div>
           </div>
         </div>
-        <div className="username">arkan</div>
+        <div className="container-username">
+          <div className="name">Arkan Damar</div>
+          <div className="username">
+            <span>u/</span>arkan
+          </div>
+        </div>
       </div>
+      {isPopUp && <PopUp />}
     </div>
   );
 }

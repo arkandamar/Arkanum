@@ -1,0 +1,38 @@
+@import "../main.scss";
+
+.triangle {
+  position: absolute;
+  margin: 0 12px;
+  margin-top: -6px;
+  @include box(24px);
+  background: $secondary-color;
+  transform: rotate(45deg);
+  left: 10px;
+  bottom: 184px;
+}
+
+.container-popup {
+  position: absolute;
+  padding: 12px 0;
+  width: 186px;
+  background: $secondary-color;
+  border-radius: 8px;
+  bottom: 108px;
+  left: 10px;
+
+  .option {
+    padding: 10px $padding-l;
+
+    &:hover {
+      background: $tertiary-color;
+      cursor: pointer;
+    }
+  }
+  .switch {
+    color: rgb(44, 135, 255);
+  }
+
+  .logout {
+    color: brown;
+  }
+}
