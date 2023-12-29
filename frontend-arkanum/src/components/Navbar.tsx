@@ -44,7 +44,13 @@ export default function Navbar() {
         <img src={home} />
         <div>Home</div>
       </div>
-      <div onClick={() => setIsPopUp(!isPopUp)} className="container-display">
+      <div
+        tabIndex={0}
+        onFocus={() => setIsPopUp(true)}
+        onBlur={() => setIsPopUp(false)}
+        onClick={() => setIsPopUp(!isPopUp)}
+        className="container-display"
+      >
         <div className="container-border">
           <div className="border">
             <div className="display"></div>

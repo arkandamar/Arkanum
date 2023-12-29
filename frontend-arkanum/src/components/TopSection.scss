@@ -1,0 +1,18 @@
+@import "../main.scss";
+@import "./Navbar.scss";
+@import "./Squares.scss";
+
+.container-top {
+  grid-area: search;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: ($navbar-expand + 2 * $navbar-padding-side) $post-width;
+  border-bottom: 1px solid $border-color;
+
+  .logo {
+    width: 100%;
+    height: 100%;
+  }
+}
